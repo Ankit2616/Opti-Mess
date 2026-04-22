@@ -37,7 +37,10 @@ const handleSubmit = async (e)=>{
  if(res.ok){
    localStorage.setItem("token",data.token);
     localStorage.setItem("role",data.role);
-
+//   if (data.role === "student") navigate("/dashboard");
+// else if (data.role === "worker") navigate("/worker");
+// else if (data.role === "dean") navigate("/dean");
+// else if (data.role === "admin") navigate("/admin");
    if(data.role === "admin")
     window.location.href="/admin";
     else

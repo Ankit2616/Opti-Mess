@@ -37,7 +37,7 @@ const User = mongoose.model("User", new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["admin","student"],
+    enum: ["admin", "student", "worker", "dean"],
     default: "student"
   }
 }));
@@ -89,7 +89,10 @@ app.post("/login", async (req,res)=>{
   if(!match)
     return res.status(400).json({message:"Wrong password"});
 
-  const token = jwt.sign({id:user._id},"secret123");
+const token = jwt.sign(
+      { id: user._id, role: user.role },
+      "secret123"
+);
 
    res.json({
  token,
@@ -115,7 +118,7 @@ app.post("/login", async (req,res)=>{
 // });
 app.post("/add-student", async (req,res)=>{
  try{
-   const {username,password} = req.body;
+   const {username, password, role} = req.body;
 
    const exists = await User.findOne({username});
    if(exists)
@@ -124,10 +127,10 @@ app.post("/add-student", async (req,res)=>{
    const hash = await bcrypt.hash(password,10);
 
    await User.create({
-     username,
-     password:hash,
-     role:"student"
-   });
+  username,
+  password: hash,
+  role: role || "student"
+});
 
    res.json({message:"Student added"});
  }

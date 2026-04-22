@@ -156,6 +156,9 @@ export default function App(){
      <Route path="/dashboard" element={<Dashboard/>}/>
      <Route path="/register" element={<Register/>}/>
      <Route path="/admin" element={<Admin/>}/>
+     {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+      {/* <Route path="/worker" element={<WorkerDashboard />} />
+      <Route path="/dean" element={<DeanDashboard />} /> */}
    </Routes>
   </BrowserRouter>
  )
