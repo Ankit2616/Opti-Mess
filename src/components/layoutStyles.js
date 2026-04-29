@@ -1,0 +1,91 @@
+export const shellStyles = {
+  page: {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "#e9ecef",
+  },
+  topStrip: { backgroundColor: "#FECD0B", height: "4px" },
+  header: { backgroundColor: "#003A6A", width: "100%" },
+  nav: { backgroundColor: "#222", border: "none", padding: "10px 0" },
+  navText: {
+    color: "#F7DC6F",
+    fontFamily: "Trebuchet MS",
+    fontSize: "22px",
+    cursor: "pointer",
+  },
+  footer: { backgroundColor: "#003A6A", width: "100%", padding: "10px 0" },
+  footerText: {
+    color: "white",
+    fontFamily: "verdana",
+    fontSize: "13px",
+    textAlign: "center",
+    margin: 0,
+    lineHeight: "20px",
+  },
+  card: {
+    background: "white",
+    padding: "25px",
+    borderRadius: "10px",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.08)",
+  },
+  title: {
+    color: "#3c78a8",
+    marginBottom: "20px",
+  },
+  button: {
+    width: "100%",
+    backgroundColor: "#337ab7",
+    color: "white",
+    padding: "10px",
+    borderRadius: "10px",
+    fontSize: "16px",
+    fontWeight: "bold",
+    marginTop: "15px",
+    border: "none",
+    cursor: "pointer",
+  },
+  input: {
+    width: "100%",
+    padding: "8px 12px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+  },
+  label: {
+    display: "block",
+    marginBottom: "5px",
+  },
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+  },
+  tableHead: {
+    background: "#003A6A",
+    color: "white",
+  },
+  th: {
+    padding: "10px",
+    border: "1px solid #ddd",
+  },
+  td: {
+    padding: "10px",
+    border: "1px solid #ddd",
+  },
+  sidebar: {
+    width: "260px",
+    background: "#f4f6f9",
+    minHeight: "100vh",
+    borderRight: "1px solid #ddd",
+  },
+  sidebarHeading: {
+    background: "#3c78a8",
+    color: "white",
+    padding: "15px",
+    fontWeight: "bold",
+  },
+  content: {
+    flex: 1,
+    padding: "30px",
+    background: "#eef2f7",
+  },
+};

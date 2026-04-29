@@ -1,3 +1,5 @@
+import DeanDashboardPage from "./pages/DeanDashboardPage";
+
 export default function DeanDashboard() {
-  return <h1>Dean Portal</h1>;
+  return <DeanDashboardPage />;
 }

@@ -1,3 +1,5 @@
+import WorkerDashboardPage from "./pages/WorkerDashboardPage";
+
 export default function WorkerDashboard() {
-  return <h1>Worker Portal</h1>;
+  return <WorkerDashboardPage />;
 }
